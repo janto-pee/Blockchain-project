@@ -5,7 +5,7 @@ const useFetch = () => {
 
     const getNews = async () => {
         try {
-            const res = await fetch(`https://bing-news-search1.p.rapidapi.com/news/search?q=cryptocurrency&freshness=Day&textFormat=Raw&safeSearch=Off&count=${3}`, {
+            const res = await fetch(`https://bing-news-search1.p.rapidapi.com/news/search?q=cryptocurrency&freshness=Day&textFormat=Raw&safeSearch=Off&count=${4}`, {
                  headers: {
                     'X-BingApis-SDK': import.meta.env.VITE_APP_NEWSAPI_SDK, 
                     'X-RapidAPI-Host': import.meta.env.VITE_APP_NEWSAPI_Host,

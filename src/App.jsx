@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div className='min-h-screen bg-primaryColor'>
       <div className='w-11/12 mx-auto'>
-        <Navbar />
+      <Navbar />
         <Welcome />
         <Services />
         <Transactions />

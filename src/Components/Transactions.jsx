@@ -9,9 +9,10 @@ const Transactions = () => {
   const NewsList = allNews?.value;
 
   return (
-    <div>
-        <h1 className="text-4xl my-4 text-white">Latest News</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-16 mb-24">
+    <div className='text-center lg:text-left'>
+        <small className='text-secondaryColor'>ETHEREUM</small>
+        <h1 className="text-4xl mb-4 text-white">Latest News</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-16 mb-24 text-center md:text-left">
           {
             NewsList && NewsList.map((items, i) => (
               <div key={i}>
