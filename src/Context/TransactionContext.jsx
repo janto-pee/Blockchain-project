@@ -29,7 +29,7 @@ export const TransactionProvider = ({children}) => {
         const {addressTo, amount, message} = formData;
         
         // input validation;
-        if(!addressTo || !amount || !message) return alert('please fill the form')
+        if(!addressTo || !amount || !message) return alert('please fill the form');
         
         sendTransaction();
     }
@@ -42,7 +42,6 @@ export const TransactionProvider = ({children}) => {
         const accounts = await ethereum.request({ method: 'eth_accounts' });
         if (accounts.length){
             setCurrentAccount(accounts[0])
-            console.log(accounts)
         } else {
             console.log('no account found')
         }
@@ -97,7 +96,7 @@ export const TransactionProvider = ({children}) => {
 
          } catch (error) {
             console.log(error);
-            throw new error('no ethereum object')
+            // throw new error('no ethereum object')
         }
     }
 
@@ -106,7 +105,7 @@ export const TransactionProvider = ({children}) => {
     }, []);
 
     return (
-        <TransactionContext.Provider value={{connectWallet, currentAccount, formData, sendTransaction, handleSend, handleForm}}>
+        <TransactionContext.Provider value={{connectWallet, isLoading, currentAccount, formData, sendTransaction, handleSend, handleForm}}>
             {children}
         </TransactionContext.Provider>
     )

@@ -1,6 +1,8 @@
 import React from 'react'
+import map from '../Assets/map2.jpg'
 
 const Services = () => {
+  
   return (
     <div className='py-20'>
       <div className="flex flex-col md:flex-row text-gray-100 gap-6 my-6">
@@ -18,7 +20,9 @@ const Services = () => {
             }
           </div>
         </div>
-        <div className="md:basis-1/2"></div>
+        <div className="md:basis-1/2">
+          <img src={map} alt="" className='w-[100%]' />
+        </div>
       </div>
     </div>
   )
